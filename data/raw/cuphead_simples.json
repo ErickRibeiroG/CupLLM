@@ -1,0 +1,290 @@
+[
+  {
+    "question": "Quem são os personagens principais de Cuphead?",
+    "answer": "Os personagens principais são Cuphead e Mugman, dois irmãos que perderam uma aposta com o Diabo e precisam coletar contratos de alma para salvar suas próprias almas."
+  },
+  {
+    "question": "Por que Cuphead e Mugman saem em aventura?",
+    "answer": "Porque perderam uma aposta no cassino do Diabo. Para não perderem suas almas, precisam coletar os contratos de outros devedores do Diabo espalhados pelas Inkwell Isles."
+  },
+  {
+    "question": "Quem é o vilão principal de Cuphead?",
+    "answer": "O Diabo, dono do Devil's Casino. Ele exige as almas de Cuphead e Mugman após vencerem a aposta contra eles."
+  },
+  {
+    "question": "Quem é Elder Kettle?",
+    "answer": "Elder Kettle é uma chaleira velha e sábia que cuida de Cuphead e Mugman. Ele entrega as armas iniciais aos irmãos e os aconselha antes da aventura."
+  },
+  {
+    "question": "Quem é Porkrind?",
+    "answer": "Porkrind é um porco rabugento dono do Porkrind's Emporium, a loja do jogo. Os jogadores compram novas armas e amuletos nele usando moedas coletadas nos níveis."
+  },
+  {
+    "question": "Quem é King Dice?",
+    "answer": "King Dice é o braço direito do Diabo e gerente do Devil's Casino. Ele é enfrentado como um gauntlet de mini-chefes antes do confronto final com o Diabo."
+  },
+  {
+    "question": "Como termina o jogo no final verdadeiro?",
+    "answer": "Cuphead e Mugman derrotam o Diabo, recuperam todas as almas e voltam para casa com o Elder Kettle. Eles conseguem enganar o Diabo e ficam livres de sua dívida."
+  },
+  {
+    "question": "O que acontece no final ruim do jogo?",
+    "answer": "Se o jogador entregar os contratos ao Diabo, ele fica com todas as almas. Cuphead e Mugman acabam trabalhando como lacaios no cassino do Diabo."
+  },
+  {
+    "question": "Quais são os chefes da Inkwell Isle I?",
+    "answer": "Os chefes da Inkwell Isle I são: The Root Pack, Goopy Le Grande, Hilda Berg, Cagney Carnation e Ribby and Croaks."
+  },
+  {
+    "question": "Quais são os chefes da Inkwell Isle II?",
+    "answer": "Os chefes da Inkwell Isle II são: Baroness Von Bon Bon, Beppi the Clown, Djimmi the Great, Grim Matchstick e Wally Warbles."
+  },
+  {
+    "question": "Quais são os chefes da Inkwell Isle III?",
+    "answer": "Os chefes da Inkwell Isle III são: Dr. Kahl's Robot, Rumor Honeybottoms, Captain Brineybeard, Sally Stageplay, Werner Werman e King Dice."
+  },
+  {
+    "question": "O que é o Root Pack?",
+    "answer": "O Root Pack é um trio de vegetais: Moe Tato (batata), Weepy (cebola) e Sal Spudder (rabanete). Cada um tem seu próprio padrão de ataque e precisam ser derrotados em sequência."
+  },
+  {
+    "question": "O que é Goopy Le Grande?",
+    "answer": "Goopy Le Grande é um blob azul que pula pela tela. Nas fases seguintes ele vira um fantasma e depois uma lápide gigante que cai sobre o jogador."
+  },
+  {
+    "question": "O que é Hilda Berg?",
+    "answer": "Hilda Berg é um dirigível que luta no céu. Ela se transforma em signos do zodíaco como Touro, Gêmeos e Sagitário antes de virar a Lua na fase final."
+  },
+  {
+    "question": "O que é Cagney Carnation?",
+    "answer": "Cagney Carnation é uma flor gigante e brava que luta do solo. Ele ataca com pistolas nos dedos, bombas de bolota e vinhas que crescem pelo chão."
+  },
+  {
+    "question": "Quem são Ribby e Croaks?",
+    "answer": "Ribby e Croaks são dois sapos irmãos que lutam em dupla. No final da batalha eles se fundem e viram uma máquina caça-níquel gigante."
+  },
+  {
+    "question": "Quem é a Baroness Von Bon Bon?",
+    "answer": "A Baroness Von Bon Bon é uma rainha dos doces que manda lacaios como bala de goma, pipoca e chiclete antes de lutar ela mesma com um castelo na cabeça."
+  },
+  {
+    "question": "Quem é Beppi the Clown?",
+    "answer": "Beppi the Clown é um palhaço de parque de diversões. Ele luta com carrossel, carro de choque, roda-gigante e vira uma montanha-russa gigante na fase final."
+  },
+  {
+    "question": "Quem é Djimmi the Great?",
+    "answer": "Djimmi the Great é um gênio que luta no ar. Ele se transforma em várias formas: um boneco de Cuphead, uma caveira, um gato e uma esfinge gigante."
+  },
+  {
+    "question": "Quem é Grim Matchstick?",
+    "answer": "Grim Matchstick é um dragão tímido que luta em batalha aérea. Ele cospe bolas de fogo em espiral e invoca criaturinhas de fogo durante o combate."
+  },
+  {
+    "question": "Quem é Wally Warbles?",
+    "answer": "Wally Warbles é um pássaro que luta dentro de uma gaiola. Ele lança penas e ovos, e o filho dele Willy Warbles aparece nas fases seguintes. No fim Wally vira só uma cabeça voadora furiosa."
+  },
+  {
+    "question": "Quem é o Dr. Kahl?",
+    "answer": "O Dr. Kahl é um cientista louco que pilota um robô enorme. O jogador precisa destruir partes específicas do robô, e depois o próprio Dr. Kahl aparece para lutar em uma fase final."
+  },
+  {
+    "question": "Quem é Werner Werman?",
+    "answer": "Werner Werman é um rato inventor que luta dentro de uma lata. Ele usa rolhas como projéteis, solta uma aranha mecânica e no final pilota um gato robô gigante."
+  },
+  {
+    "question": "Quem é Sally Stageplay?",
+    "answer": "Sally Stageplay é uma atriz que luta em um palco de teatro. A batalha imita peças clássicas com cenas de marido ciumento, casamento e até um anjo bebê gigante descendo do céu."
+  },
+  {
+    "question": "Quem é Rumor Honeybottoms?",
+    "answer": "Rumor Honeybottoms é uma rainha das abelhas que luta em batalha aérea. Ela manda abelhas-policial, lança mísseis e ataca com enxames em vários padrões."
+  },
+  {
+    "question": "Quem é Captain Brineybeard?",
+    "answer": "Captain Brineybeard é um pirata que luta em cima do seu navio, que tem vida própria. O navio usa canhões e tentáculos de polvo, e no final vira uma sereia gigante."
+  },
+  {
+    "question": "O que é o Inkwell Hell?",
+    "answer": "O Inkwell Hell é o domínio do Diabo, a área final do jogo base. Para chegar lá é preciso vencer o gauntlet de King Dice e depois enfrentar o Diabo para ver o final verdadeiro."
+  },
+  {
+    "question": "Como funciona o gauntlet de King Dice?",
+    "answer": "O gauntlet de King Dice é um tabuleiro de dados. Dependendo do resultado dos dados, o jogador enfrenta mini-chefes diferentes como Mr. Wheezy, Pip and Dot e Phear Cube antes de chegar no King Dice."
+  },
+  {
+    "question": "Qual é a arma padrão de Cuphead?",
+    "answer": "A arma padrão é o Peashooter, que dispara projéteis em linha reta. É uma arma equilibrada e está disponível desde o início do jogo, sem precisar comprar."
+  },
+  {
+    "question": "O que é a arma Spread?",
+    "answer": "O Spread é uma espécie de escopeta que dispara três projéteis em leque. Causa muito dano de perto, mas é fraco a distância. Precisa ser comprado na loja."
+  },
+  {
+    "question": "O que é a arma Chaser?",
+    "answer": "O Chaser dispara projéteis teleguiados que seguem automaticamente os inimigos. Causa menos dano por tiro, mas facilita a mira. Precisa ser comprado na loja."
+  },
+  {
+    "question": "O que é a arma Lobber?",
+    "answer": "O Lobber dispara projéteis que saltam no chão em arco. É bom para acertar inimigos rasteiros e exige prática para mirar direito."
+  },
+  {
+    "question": "O que é a arma Roundabout?",
+    "answer": "O Roundabout dispara um projétil que vai para frente e volta como um bumerangue, podendo acertar o inimigo duas vezes."
+  },
+  {
+    "question": "O que é a arma Charge?",
+    "answer": "O Charge dispara uma bola de energia poderosa quando o botão de tiro é segurado até carregar. É uma das armas com maior dano do jogo."
+  },
+  {
+    "question": "O que são os movimentos EX?",
+    "answer": "Movimentos EX são versões mais fortes de cada arma, ativados segurando o botão de travar e pressionando atirar. Eles consomem metade do medidor de Super e causam bem mais dano."
+  },
+  {
+    "question": "O que são os Super Arts?",
+    "answer": "Super Arts são habilidades especiais ativadas com o medidor de Super cheio. As três opções são: Super I (bola de energia gigante), Super II (anel que destrói projéteis) e Super III (Cuphead fica invencível e causa dano tocando nos inimigos)."
+  },
+  {
+    "question": "O que são os amuletos (charms)?",
+    "answer": "Amuletos são itens passivos que dão habilidades especiais durante as batalhas, como vida extra, invencibilidade no dash ou parry automático. Apenas um amuleto pode ser equipado por vez."
+  },
+  {
+    "question": "O que faz o amuleto Smoke Bomb?",
+    "answer": "O Smoke Bomb deixa Cuphead invencível durante o dash, trocando o dash normal por uma esquiva em fumaça. A desvantagem é não poder atirar durante o movimento."
+  },
+  {
+    "question": "O que faz o amuleto Heart?",
+    "answer": "O amuleto Heart adiciona um ponto de vida extra a Cuphead, aumentando sua resistência nas batalhas."
+  },
+  {
+    "question": "O que faz o amuleto P. Sugar?",
+    "answer": "O P. Sugar faz Cuphead parryar automaticamente objetos cor-de-rosa quando ele está parado, sem precisar apertar o botão de pulo."
+  },
+  {
+    "question": "O que faz o amuleto Whetstone?",
+    "answer": "O Whetstone faz o primeiro parry de cada batalha causar dano no inimigo além do efeito normal."
+  },
+  {
+    "question": "Para que serve o parry?",
+    "answer": "O parry serve para bater em objetos cor-de-rosa pulando e pressionando o botão de pulo novamente perto deles. Isso carrega o medidor de Super e pode eliminar certos ataques inimigos."
+  },
+  {
+    "question": "O que são os níveis run-and-gun?",
+    "answer": "São níveis de plataforma onde Cuphead corre, pula e atira em inimigos para coletar moedas. As moedas são usadas para comprar armas e amuletos na loja. Não há chefe nesses níveis."
+  },
+  {
+    "question": "Como funciona o sistema de notas?",
+    "answer": "Após cada batalha de chefe o jogo dá uma nota de D até S. Para tirar S é preciso terminar rápido, sem levar dano, fazendo parrys e sem usar Super Arts."
+  },
+  {
+    "question": "O que acontece quando Cuphead morre?",
+    "answer": "O jogo reinicia a batalha desde o início. Não há checkpoints nas lutas de chefe. O jogador pode tentar de novo quantas vezes quiser."
+  },
+  {
+    "question": "Quantas vidas Cuphead tem?",
+    "answer": "Cuphead começa com 3 corações. Com o amuleto Heart fica com 4. Com o amuleto Twin Hearts do DLC fica com 5."
+  },
+  {
+    "question": "O que é o modo Simple?",
+    "answer": "O modo Simple deixa as batalhas mais fáceis, com menos fases por chefe. Mas completar o jogo no Simple não dá acesso ao King Dice, ao Diabo ou ao final verdadeiro."
+  },
+  {
+    "question": "O que é o modo cooperativo?",
+    "answer": "O co-op local permite que dois jogadores joguem juntos: um controla Cuphead e o outro Mugman. Se um morrer, o outro pode revivê-lo ficando parado sobre o fantasma."
+  },
+  {
+    "question": "O que é o modo avião?",
+    "answer": "Em batalhas aéreas, Cuphead vira um avião. No modo avião ele pode atirar, usar um tiro EX especial e soltar bombas. O movimento é livre em todas as direções."
+  },
+  {
+    "question": "Quais batalhas são aéreas no jogo base?",
+    "answer": "As batalhas aéreas onde Cuphead usa o avião são: Hilda Berg, Grim Matchstick, Wally Warbles, Djimmi the Great e Rumor Honeybottoms."
+  },
+  {
+    "question": "Como funciona o lock-on?",
+    "answer": "Segurando o botão de lock-on, Cuphead para de se mover e atira numa direção fixa. É útil para mirar com precisão sem se deslocar acidentalmente."
+  },
+  {
+    "question": "Qual é o nome do DLC de Cuphead?",
+    "answer": "O DLC se chama Cuphead: The Delicious Last Course. Foi lançado em junho de 2022 e adiciona a Inkwell Isle IV, novos chefes, armas, amuletos e a personagem Ms. Chalice."
+  },
+  {
+    "question": "Quem é Ms. Chalice?",
+    "answer": "Ms. Chalice é uma taça fantasma que empresta o corpo de Cuphead ou Mugman para participar da aventura do DLC. Ela tem habilidades únicas: pulo duplo, dash que faz parry automaticamente e rolamento esquiva no chão."
+  },
+  {
+    "question": "Como jogar com Ms. Chalice?",
+    "answer": "Para jogar como Ms. Chalice é preciso equipar o amuleto Astral Cookie, comprado no DLC. Ao equipá-lo, o personagem se transforma nela. Como o amuleto ocupa o único slot disponível, nenhum outro amuleto pode ser usado junto."
+  },
+  {
+    "question": "Ms. Chalice pode ser usada nos chefes do jogo base?",
+    "answer": "Sim. Com o Astral Cookie equipado, Ms. Chalice pode ser usada em qualquer batalha do jogo, incluindo todos os chefes das Inkwell Isles I, II e III."
+  },
+  {
+    "question": "Quem é Chef Saltbaker?",
+    "answer": "Chef Saltbaker é o vilão do DLC. Ele finge ajudar Ms. Chalice a recuperar seu corpo, mas no final revela que pretendia usar os heróis como ingredientes de uma receita poderosa."
+  },
+  {
+    "question": "Quais são os chefes do DLC?",
+    "answer": "Os chefes do DLC na Inkwell Isle IV são: Glumstone the Giant, Mortimer Freeze, Moonshine Mob, Esther Winchester e o chefe final Chef Saltbaker. Há também o chefe secreto Howling Aces."
+  },
+  {
+    "question": "Quem é Glumstone the Giant?",
+    "answer": "Glumstone é um gigante de pedra que vive em uma caverna. Ele lança gnomos e vermes do próprio corpo, depois vira um marionete controlado por gnomos e ainda tem uma fase de mão gigante."
+  },
+  {
+    "question": "Quem é Mortimer Freeze?",
+    "answer": "Mortimer Freeze é um mago do gelo. Ele ataca com flocos de neve, invoca um yeti gigante e na fase final se encapsula em gelo disparando magia intensa."
+  },
+  {
+    "question": "Quem são os Moonshine Mob?",
+    "answer": "Os Moonshine Mob são sapos gângsteres contrabandistas que lutam em um bar estilo anos 1920. Vários personagens se revezam atacando antes de aparecer uma forma de sapo gigante no final."
+  },
+  {
+    "question": "Quem é Esther Winchester?",
+    "answer": "Esther Winchester é uma cowgirl rica. A batalha tem tema de faroeste com ovelhas, um touro mecânico gigante e Esther pilotando diferentes engenhocas em estilo western."
+  },
+  {
+    "question": "Quem são os Howling Aces?",
+    "answer": "Os Howling Aces são o chefe secreto do DLC: um grupo de cães pilotos que batalham em duelo aéreo. É um dos confrontos mais difíceis de todo o jogo."
+  },
+  {
+    "question": "O que é o amuleto Astral Cookie?",
+    "answer": "O Astral Cookie é o amuleto do DLC que transforma o personagem em Ms. Chalice. Por ocupar o slot inteiro, não é possível usar outros amuletos com ele equipado."
+  },
+  {
+    "question": "O que é o amuleto Broken Relic?",
+    "answer": "O Broken Relic parece inútil mas esconde uma missão secreta. Ao equipá-lo e visitar um cemitério específico na Inkwell Isle IV, o jogador aciona uma batalha secreta. Vencer essa batalha transforma o amuleto no Cursed Relic."
+  },
+  {
+    "question": "O que é o amuleto Cursed Relic?",
+    "answer": "O Cursed Relic alterna aleatoriamente entre os efeitos de outros amuletos toda vez que o jogador leva dano. Conforme mais batalhas são concluídas com ele equipado, novos efeitos vão sendo desbloqueados até virar o Divine Relic."
+  },
+  {
+    "question": "O que é o amuleto Divine Relic?",
+    "answer": "O Divine Relic é a forma final do Broken Relic. Para obtê-lo é preciso completar todas as batalhas e níveis do DLC com o Cursed Relic equipado. Quando maximizado, ele dá os benefícios de todos os amuletos ao mesmo tempo."
+  },
+  {
+    "question": "Como termina o DLC?",
+    "answer": "Após derrotar Chef Saltbaker, o espírito de Ms. Chalice é liberto. Ela poderia seguir em paz, mas decide ficar ao lado de Cuphead e Mugman. Os três celebram juntos na Inkwell Isle IV."
+  },
+  {
+    "question": "Que estilo de arte o Cuphead usa?",
+    "answer": "Cuphead usa animação desenhada à mão que imita os cartoons dos anos 1930, como os do estúdio Fleischer. Isso inclui fundos em aquarela, grain de filme e o estilo rubber hose, onde os personagens têm membros arredondados e elásticos."
+  },
+  {
+    "question": "Que tipo de música tem no Cuphead?",
+    "answer": "A trilha sonora é de jazz e big band ao vivo, composta por Kristofer Maddigan. Foram quase 50 faixas gravadas por uma orquestra real, combinando com o estilo de cartoon dos anos 1930."
+  },
+  {
+    "question": "Quem fez o Cuphead?",
+    "answer": "Cuphead foi feito pela Studio MDHR, estúdio independente canadense fundado pelos irmãos Chad e Jared Moldenhauer. O jogo levou cerca de sete anos para ser desenvolvido e foi lançado em 2017."
+  },
+  {
+    "question": "Em quais plataformas Cuphead está disponível?",
+    "answer": "Cuphead está disponível em PC (Windows), Xbox One, Xbox Series X/S, macOS, Nintendo Switch, PlayStation 4 e PlayStation 5. O DLC está nas mesmas plataformas."
+  },
+  {
+    "question": "Existe série animada de Cuphead?",
+    "answer": "Sim, existe The Cuphead Show! na Netflix. É uma série animada com os personagens do jogo em aventuras originais, mantendo o estilo visual dos anos 1930 do jogo."
+  }
+]

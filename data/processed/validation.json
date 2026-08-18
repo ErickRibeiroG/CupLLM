@@ -1,0 +1,170 @@
+[
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quais batalhas são aéreas no jogo base?"
+      },
+      {
+        "role": "assistant",
+        "content": "As batalhas aéreas onde Cuphead usa o avião são: Hilda Berg, Grim Matchstick, Wally Warbles, Djimmi the Great e Rumor Honeybottoms."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quem é Djimmi the Great?"
+      },
+      {
+        "role": "assistant",
+        "content": "Djimmi the Great é um gênio que luta no ar. Ele se transforma em várias formas: um boneco de Cuphead, uma caveira, um gato e uma esfinge gigante."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "O que é a arma Chaser?"
+      },
+      {
+        "role": "assistant",
+        "content": "O Chaser dispara projéteis teleguiados que seguem automaticamente os inimigos. Causa menos dano por tiro, mas facilita a mira. Precisa ser comprado na loja."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "O que é o modo Simple?"
+      },
+      {
+        "role": "assistant",
+        "content": "O modo Simple deixa as batalhas mais fáceis, com menos fases por chefe. Mas completar o jogo no Simple não dá acesso ao King Dice, ao Diabo ou ao final verdadeiro."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "O que acontece no final ruim do jogo?"
+      },
+      {
+        "role": "assistant",
+        "content": "Se o jogador entregar os contratos ao Diabo, ele fica com todas as almas. Cuphead e Mugman acabam trabalhando como lacaios no cassino do Diabo."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quem é Wally Warbles?"
+      },
+      {
+        "role": "assistant",
+        "content": "Wally Warbles é um pássaro que luta dentro de uma gaiola. Ele lança penas e ovos, e o filho dele Willy Warbles aparece nas fases seguintes. No fim Wally vira só uma cabeça voadora furiosa."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quem são Ribby e Croaks?"
+      },
+      {
+        "role": "assistant",
+        "content": "Ribby e Croaks são dois sapos irmãos que lutam em dupla. No final da batalha eles se fundem e viram uma máquina caça-níquel gigante."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "O que é a arma Charge?"
+      },
+      {
+        "role": "assistant",
+        "content": "O Charge dispara uma bola de energia poderosa quando o botão de tiro é segurado até carregar. É uma das armas com maior dano do jogo."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quem é Ms. Chalice?"
+      },
+      {
+        "role": "assistant",
+        "content": "Ms. Chalice é uma taça fantasma que empresta o corpo de Cuphead ou Mugman para participar da aventura do DLC. Ela tem habilidades únicas: pulo duplo, dash que faz parry automaticamente e rolamento esquiva no chão."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quem é Porkrind?"
+      },
+      {
+        "role": "assistant",
+        "content": "Porkrind é um porco rabugento dono do Porkrind's Emporium, a loja do jogo. Os jogadores compram novas armas e amuletos nele usando moedas coletadas nos níveis."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "O que são os amuletos (charms)?"
+      },
+      {
+        "role": "assistant",
+        "content": "Amuletos são itens passivos que dão habilidades especiais durante as batalhas, como vida extra, invencibilidade no dash ou parry automático. Apenas um amuleto pode ser equipado por vez."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "O que são os níveis run-and-gun?"
+      },
+      {
+        "role": "assistant",
+        "content": "São níveis de plataforma onde Cuphead corre, pula e atira em inimigos para coletar moedas. As moedas são usadas para comprar armas e amuletos na loja. Não há chefe nesses níveis."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Como funciona o sistema de notas?"
+      },
+      {
+        "role": "assistant",
+        "content": "Após cada batalha de chefe o jogo dá uma nota de D até S. Para tirar S é preciso terminar rápido, sem levar dano, fazendo parrys e sem usar Super Arts."
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "O que é o modo avião?"
+      },
+      {
+        "role": "assistant",
+        "content": "Em batalhas aéreas, Cuphead vira um avião. No modo avião ele pode atirar, usar um tiro EX especial e soltar bombas. O movimento é livre em todas as direções."
+      }
+    ]
+  }
+]
