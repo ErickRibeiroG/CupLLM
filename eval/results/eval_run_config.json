@@ -1,0 +1,29 @@
+{
+  "base_model": "Qwen/Qwen3-1.7B",
+  "finetuned_model": "Er1ckRg/cuphead_basico",
+  "dataset": "Er1ckRg/cuphead_basico@dd714567cfd0ff14195bd04d2b05b7192f5d1b84",
+  "n_prompts": 34,
+  "system_prompt": "Você é um especialista no jogo Cuphead e sua DLC The Delicious Last Course. Responda perguntas de forma precisa e factual sobre a campanha, chefes, mecânicas e conteúdo do jogo.",
+  "enable_thinking": false,
+  "dtype": "torch.float32",
+  "device": "Tesla T4",
+  "batch_size": 8,
+  "generation_config": {
+    "max_new_tokens": 512,
+    "do_sample": false,
+    "pad_token_id": 151643,
+    "eos_token_id": [
+      151645,
+      151643
+    ],
+    "transformers_version": "5.12.1"
+  },
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.12.1"
+  },
+  "seconds": {
+    "base": 137.3,
+    "finetuned": 75.9
+  }
+}

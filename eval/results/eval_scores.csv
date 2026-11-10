@@ -1,0 +1,69 @@
+id,category,training_coverage,model,score,complete,missing_facts,new_tokens
+chefe_01,chefes,novo,base,0.6666666666666666,False,batata*|potato|sal spudder,185
+chefe_01,chefes,novo,finetuned,1.0,True,,130
+chefe_02,chefes,novo,base,0.0,False,sereia*|mermaid ; oceano|fundo do mar|submarin*|subaquatic*|debaixo d agua|embaixo d agua|sob a agua,425
+chefe_02,chefes,novo,finetuned,0.0,False,sereia*|mermaid ; oceano|fundo do mar|submarin*|subaquatic*|debaixo d agua|embaixo d agua|sob a agua,147
+chefe_03,chefes,novo,base,0.5,False,trem|trens|locomotiva|ferrovia|ferroviari*|trilho*|train,366
+chefe_03,chefes,novo,finetuned,1.0,True,,151
+chefe_04,chefes,coberto,base,0.0,False,gosma|slime|gelatin*|geleia|meleca|bolha de gosma ; azul,424
+chefe_04,chefes,coberto,finetuned,0.0,False,gosma|slime|gelatin*|geleia|meleca|bolha de gosma ; azul,93
+chefe_05,chefes,coberto,base,0.0,False,isle i|isle 1|isle one|ilha i|ilha 1|primeira ilha,291
+chefe_05,chefes,coberto,finetuned,1.0,True,,77
+chefe_06,chefes,coberto,base,0.0,False,isle iii|isle 3|isle three|ilha iii|ilha 3|terceira ilha,248
+chefe_06,chefes,coberto,finetuned,0.0,False,isle iii|isle 3|isle three|ilha iii|ilha 3|terceira ilha,97
+chefe_07,chefes,coberto,base,0.0,False,rato|ratinho|ratazana|camundongo|mouse|rat,374
+chefe_07,chefes,coberto,finetuned,0.0,False,rato|ratinho|ratazana|camundongo|mouse|rat,102
+chefe_08,chefes,coberto,base,0.0,False,abelha*|colmeia*|apicult*|bee|bees|hive,512
+chefe_08,chefes,coberto,finetuned,0.0,False,abelha*|colmeia*|apicult*|bee|bees|hive,143
+chefe_09,chefes,coberto,base,0.5,False,gelo|neve|inverno|congela*|glacial|ice|snow|winter,512
+chefe_09,chefes,coberto,finetuned,0.5,False,mago|magico|feiticeiro|bruxo|ilusionista|wizard|magician,118
+mec_01,mecanicas,coberto,base,1.0,True,,512
+mec_01,mecanicas,coberto,finetuned,1.0,True,,148
+mec_02,mecanicas,coberto,base,0.0,False,dano|acertando|acertar|atingindo|atingir|atirando|atirar ; parry|parries|aparar|aparando,512
+mec_02,mecanicas,coberto,finetuned,0.5,False,parry|parries|aparar|aparando,138
+mec_03,mecanicas,novo,base,0.0,False,duas armas|2 armas|segunda arma|arma secundaria|arma primaria|duas armas equipadas,512
+mec_03,mecanicas,novo,finetuned,0.0,False,duas armas|2 armas|segunda arma|arma secundaria|arma primaria|duas armas equipadas,123
+mec_04,mecanicas,parcial,base,0.0,False,fantasma*|alma|espirito|ghost ; parry|aparar|aparando,431
+mec_04,mecanicas,parcial,finetuned,0.0,False,fantasma*|alma|espirito|ghost ; parry|aparar|aparando,111
+mec_05,mecanicas,novo,base,0.0,False,duas armas|2 armas|ate duas|dois tipos de arma*|primaria e uma secundaria|primaria e secundaria,172
+mec_05,mecanicas,novo,finetuned,0.0,False,duas armas|2 armas|ate duas|dois tipos de arma*|primaria e uma secundaria|primaria e secundaria,87
+item_01,itens,coberto,base,0.0,False,dash|esquiva|investida ; invencib*|invulnerab*|intangivel|imune|sem levar dano|nao recebe dano|nao toma dano|invisivel,387
+item_01,itens,coberto,finetuned,0.0,False,dash|esquiva|investida ; invencib*|invulnerab*|intangivel|imune|sem levar dano|nao recebe dano|nao toma dano|invisivel,87
+item_02,itens,parcial,base,0.5,False,vida extra|ponto de vida extra|ponto de vida adicional|1 ponto de vida|um ponto de vida|1 hp|um hp|hp extra|1 coracao|um coracao|coracao extra|coracao adicional|1 de vida,512
+item_02,itens,parcial,finetuned,0.0,False,vida extra|ponto de vida extra|ponto de vida adicional|1 ponto de vida|um ponto de vida|1 hp|um hp|hp extra|1 coracao|um coracao|coracao extra|coracao adicional|1 de vida ; reduz*|diminu*|menos dano|menor dano,91
+item_03,itens,parcial,base,0.5,False,2 pontos de vida|dois pontos de vida|2 hp|dois hp|2 coracoes|dois coracoes|duas vidas|2 vidas|2 de vida|dois de vida,512
+item_03,itens,parcial,finetuned,0.0,False,2 pontos de vida|dois pontos de vida|2 hp|dois hp|2 coracoes|dois coracoes|duas vidas|2 vidas|2 de vida|dois de vida ; reduz*|diminu*|menos dano|menor dano,108
+item_04,itens,parcial,base,0.0,False,curto alcance|curta distancia|curta*|de perto|proximidade|a queima roupa ; leque|espalh*|dispers*|espingarda|escopeta|shotgun|varios projeteis|multiplos projeteis|quatro projeteis|4 projeteis,512
+item_04,itens,parcial,finetuned,0.0,False,curto alcance|curta distancia|curta*|de perto|proximidade|a queima roupa ; leque|espalh*|dispers*|espingarda|escopeta|shotgun|varios projeteis|multiplos projeteis|quatro projeteis|4 projeteis,134
+item_05,itens,parcial,base,0.0,False,arco|parabol*|curva|trajetoria curva ; quic*|ricochet*|saltam|salta|pulam|pula|bounce*,512
+item_05,itens,parcial,finetuned,0.0,False,arco|parabol*|curva|trajetoria curva ; quic*|ricochet*|saltam|salta|pulam|pula|bounce*,512
+item_06,itens,coberto,base,0.0,False,raio|feixe|laser|rajada continua|rajada de energia ; super i|super 1|primeiro super,512
+item_06,itens,coberto,finetuned,0.0,False,raio|feixe|laser|rajada continua|rajada de energia ; super i|super 1|primeiro super,119
+item_07,itens,novo,base,0.0,False,parry|parries|aparar ; vida|ponto de vida|pontos de vida|hp|coracao|coracoes|cura*|recupera*,387
+item_07,itens,novo,finetuned,0.5,False,parry|parries|aparar,90
+item_08,itens,novo,base,0.0,False,chalice,280
+item_08,itens,novo,finetuned,0.0,False,chalice,116
+dlc_01,dlc,coberto,base,1.0,True,,120
+dlc_01,dlc,coberto,finetuned,0.0,False,2022,74
+dlc_02,dlc,novo,base,0.0,False,barco|bote|barqueiro|boatman|navio|embarcacao|balsa,470
+dlc_02,dlc,novo,finetuned,0.0,False,barco|bote|barqueiro|boatman|navio|embarcacao|balsa,136
+prod_01,producao,coberto,base,1.0,True,,166
+prod_01,producao,coberto,finetuned,1.0,True,,108
+prod_02,producao,novo,base,1.0,True,,259
+prod_02,producao,novo,finetuned,1.0,True,,122
+prod_03,producao,coberto,base,0.0,False,chad ; jared,250
+prod_03,producao,coberto,finetuned,0.0,False,chad ; jared,83
+prod_04,producao,coberto,base,0.0,False,maddigan|kristofer,316
+prod_04,producao,coberto,finetuned,0.0,False,maddigan|kristofer,171
+prod_05,producao,novo,base,0.5,False,2014,150
+prod_05,producao,novo,finetuned,0.0,False,e3 ; 2014,132
+geral_01,fora_do_dominio,fora_do_dominio,base,1.0,True,,14
+geral_01,fora_do_dominio,fora_do_dominio,finetuned,1.0,True,,106
+geral_02,fora_do_dominio,fora_do_dominio,base,1.0,True,,16
+geral_02,fora_do_dominio,fora_do_dominio,finetuned,1.0,True,,13
+geral_03,fora_do_dominio,fora_do_dominio,base,1.0,True,,109
+geral_03,fora_do_dominio,fora_do_dominio,finetuned,0.0,False,team cherry,98
+geral_04,fora_do_dominio,fora_do_dominio,base,1.0,True,,60
+geral_04,fora_do_dominio,fora_do_dominio,finetuned,1.0,True,,61
+geral_05,fora_do_dominio,fora_do_dominio,base,0.5,False,but fair,9
+geral_05,fora_do_dominio,fora_do_dominio,finetuned,1.0,True,,8

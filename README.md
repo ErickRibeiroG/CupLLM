@@ -11,6 +11,8 @@ Fine-tuning supervisionado (SFT) completo do [Qwen/Qwen3-1.7B](https://huggingfa
 
 Um LLM pequeno de uso geral conhece pouco de um domínio de nicho e tende a responder de forma genérica ou inventada. A pergunta do projeto: **com poucos exemplos (84) e uma GPU gratuita do Kaggle, quanto um SFT melhora um modelo de 1,7B parâmetros num domínio fechado, e quanto ele perde fora desse domínio?**
 
+**Resposta curta:** o modelo aprendeu o *formato* das respostas, mas não os *fatos*. A precisão factual ficou igual à do modelo base (ver [Resultados](#resultados)).
+
 ## Abordagem
 
 1. **Dados.** 84 conversas `system / user / assistant` em pt-BR, publicadas no Hub. O script de preparo fixa a revisão do dataset, valida o formato, remove duplicatas e gera os splits de treino e validação.
@@ -27,16 +29,36 @@ Um LLM pequeno de uso geral conhece pouco de um domínio de nicho e tende a resp
 
 ## Resultados
 
-[PREENCHER: colar as tabelas de `eval_summary.md` depois de rodar o notebook no Kaggle]
+Avaliação no Kaggle (Tesla T4), com as respostas completas em [`eval/results/`](eval/results/).
 
-| Subconjunto | Modelo | n | Cobertura de fatos (%) | Respostas completas (%) |
-|---|---|---|---|---|
-| Cuphead | Qwen3-1.7B (base) | 29 | [PREENCHER] | [PREENCHER] |
-| Cuphead | cuphead_basico | 29 | [PREENCHER] | [PREENCHER] |
-| Conhecimento geral | Qwen3-1.7B (base) | 5 | [PREENCHER] | [PREENCHER] |
-| Conhecimento geral | cuphead_basico | 5 | [PREENCHER] | [PREENCHER] |
+| Subconjunto | Modelo | n | Cobertura de fatos (%) | Respostas completas (%) | Tokens por resposta |
+|---|---|---|---|---|---|
+| Cuphead | Qwen3-1.7B (base) | 29 | 24,7 | 13,8 | 373 |
+| Cuphead | cuphead_basico | 29 | 25,9 | 20,7 | 129 |
+| Conhecimento geral | Qwen3-1.7B (base) | 5 | 90,0 | 80,0 | 42 |
+| Conhecimento geral | cuphead_basico | 5 | 80,0 | 80,0 | 57 |
 
-[PREENCHER: 2 ou 3 frases de interpretação, por exemplo o ganho em perguntas cobertas × novas]
+Na comparação pareada (mesma pergunta), o ajustado foi melhor em 5 perguntas, empatou em 20 e foi pior em 4.
+
+**O fine-tuning mudou o estilo, não o conhecimento.**
+
+- **Fatos:** não houve ganho mensurável (25,9% × 24,7%). Mesmo em perguntas cujas respostas estão no treino, o modelo contradiz o próprio dataset. Ele diz que Werner Werman é um "animal de estimação" (o dataset diz rato) e que a trilha é de "John Linnell" (o dataset diz Kristofer Maddigan).
+- **Estilo:** as respostas ficaram cerca de 3× mais curtas, num parágrafo único sem Markdown (0 de 29 respostas, contra 29 de 29 no base), exatamente o formato do dataset.
+- **Conhecimento geral:** foi preservado em geral, com uma regressão (inventou o estúdio de Hollow Knight).
+- **Hipótese para a causa:** cerca de 80 exemplos × 3 épocas, com batch 4, dão uns 60 passos com LR 1,5e-5. É suficiente para mudar o formato, mas não para gravar fatos.
+
+**Revisão manual da métrica.** Ler as respostas revelou alguns falsos positivos:
+- "recomeçar" casou numa frase negativa;
+- "coração" casou em "chefe de coração";
+- uma resposta levou nota máxima apesar de inventar um vegetal a mais.
+
+Eles não mudam a conclusão, mas mostram por que a métrica automática não dispensa ler as respostas.
+
+**Próximos passos possíveis:**
+- corrigir os erros do dataset;
+- verificar se o modelo reproduz as respostas *de treino* (para confirmar o subtreino);
+- testar mais passos ou um LR maior;
+- comparar com RAG, que costuma ser a abordagem mais adequada para injetar fatos de uma base pequena.
 
 ### Limitações conhecidas
 
