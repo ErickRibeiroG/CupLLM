@@ -1,1 +1,34 @@
-.venv
+# Ambiente
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Segredos
+.env
+*.env
+!.env.example
+kaggle.json
+
+# Dados gerados (a fonte é o dataset no Hugging Face Hub)
+data/processed/
+data/raw/
+
+# Pesos, checkpoints e saídas de treino
+runs/
+models/
+outputs/
+checkpoint-*/
+wandb/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.onnx
+
+# Cache do Hugging Face, caso HF_HOME aponte para o projeto
+.cache/

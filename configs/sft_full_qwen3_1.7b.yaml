@@ -1,0 +1,36 @@
+# Fine-tuning completo (sem LoRA) do Qwen3-1.7B com TRL SFTTrainer.
+#
+# Hiperparâmetros recuperados do training_args.bin publicado em
+# https://huggingface.co/Er1ckRg/cuphead_basico (gerado com TRL 1.7.0 / Transformers 5.12.1).
+# Campos marcados com "# alterado" diferem do treino original de propósito.
+#
+# Uso: python -m src.training.train --config configs/sft_full_qwen3_1.7b.yaml
+
+# --- ScriptArguments (src/training/train.py) ---
+model_name_or_path: Qwen/Qwen3-1.7B
+
+# --- SFTConfig ---
+output_dir: runs/sft-cuphead-qwen3-1.7b-full   # alterado: o original se chamava "sft-cuphead-qwen35-08b-full"
+num_train_epochs: 3
+learning_rate: 1.5e-5
+lr_scheduler_type: cosine
+warmup_steps: 10
+optim: adamw_bnb_8bit
+weight_decay: 0.01
+max_grad_norm: 1.0
+per_device_train_batch_size: 4
+per_device_eval_batch_size: 4
+gradient_accumulation_steps: 1
+bf16: true
+gradient_checkpointing: true
+max_length: 1024
+packing: false
+assistant_only_loss: true      # loss só nos tokens do assistente (o TRL troca o template do Qwen3 por qwen3_training.jinja)
+eval_strategy: steps
+eval_steps: 50
+logging_steps: 50
+save_strategy: "no"
+seed: 42
+report_to: none
+push_to_hub: false             # alterado: o original era true. Publicar sobrescreve o model card (ver README).
+hub_model_id: Er1ckRg/cuphead_basico

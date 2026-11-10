@@ -1,157 +1,88 @@
-import torch
+"""Fine-tuning supervisionado (SFT) completo do Qwen3-1.7B no dataset de perguntas sobre Cuphead.
+
+Reconstrução do treino que gerou Er1ckRg/cuphead_basico (o notebook original roda no Kaggle).
+Os hiperparâmetros vêm de configs/sft_full_qwen3_1.7b.yaml e podem ser sobrescritos na linha de comando.
+
+Uso (a partir da raiz do repositório, com GPU):
+    python -m src.data.prepare_dataset
+    python -m src.training.train --config configs/sft_full_qwen3_1.7b.yaml
+
+Teste rápido em CPU (modelo minúsculo, 2 passos):
+    python -m src.training.train --config configs/sft_full_qwen3_1.7b.yaml \
+        --model_name_or_path trl-internal-testing/tiny-Qwen3ForCausalLM --max_steps 2 \
+        --optim adamw_torch --bf16 false --output_dir runs/smoke
+
+Publicar no Hub exige --push_to_hub true e a variável de ambiente HF_TOKEN (nunca token no código).
+"""
+
+import os
+from dataclasses import dataclass, field
 
 from datasets import load_dataset
-from transformers import (
-    AutoTokenizer,
-    AutoModelForCausalLM,
-    TrainingArguments,
-    Trainer,
-    DataCollatorForLanguageModeling,
-)
+from trl import SFTConfig, SFTTrainer, TrlParser
 
-from peft import LoraConfig, get_peft_model
+from src.config import BASE_MODEL_ID, TRAIN_FILE, VALIDATION_FILE
 
 
-MODEL_NAME = "Qwen/Qwen2.5-0.5B-Instruct"
-
-TRAIN_FILE = "data/processed/train.json"
-VALIDATION_FILE = "data/processed/validation.json"
-
-
-def load_data():
-    dataset = load_dataset(
-        "json",
-        data_files={
-            "train": TRAIN_FILE,
-            "validation": VALIDATION_FILE,
-        },
-    )
-
-    return dataset
+@dataclass
+class ScriptArguments:
+    model_name_or_path: str = field(default=BASE_MODEL_ID)
+    train_file: str = field(default=str(TRAIN_FILE))
+    validation_file: str = field(default=str(VALIDATION_FILE))
 
 
-def format_conversation(example, tokenizer):
-    text = tokenizer.apply_chat_template(
-        example["messages"],
-        tokenize=False,
-        add_generation_prompt=False,
-    )
+def load_splits(script_args: ScriptArguments):
+    data_files = {"train": script_args.train_file}
+    if os.path.exists(script_args.validation_file):
+        data_files["validation"] = script_args.validation_file
 
-    return {"text": text}
+    missing = [path for path in data_files.values() if not os.path.exists(path)]
+    if missing:
+        raise FileNotFoundError(f"{missing} não encontrado. Rode antes: python -m src.data.prepare_dataset")
 
-
-def tokenize(example, tokenizer):
-    return tokenizer(
-        example["text"],
-        truncation=True,
-        max_length=512,
-    )
+    return load_dataset("json", data_files=data_files)
 
 
-def main():
+def main() -> None:
+    parser = TrlParser((ScriptArguments, SFTConfig))
+    script_args, training_args = parser.parse_args_and_config()
 
-    print("Carregando dataset...")
-    dataset = load_data()
+    if training_args.push_to_hub and not os.environ.get("HF_TOKEN"):
+        raise RuntimeError("push_to_hub=true exige a variável de ambiente HF_TOKEN.")
+
+    dataset = load_splits(script_args)
+    eval_dataset = dataset.get("validation")
+    if eval_dataset is None and training_args.eval_strategy != "no":
+        print("Sem arquivo de validação: desativando avaliação durante o treino.")
+        training_args.eval_strategy = "no"
 
     print(dataset)
 
-    print("\nCarregando tokenizer...")
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
-
-    print("Formatando conversas...")
-
-    dataset = dataset.map(
-        lambda example: format_conversation(
-            example,
-            tokenizer
-        )
-    )
-
-    print("\nTokenizando dataset...")
-
-    tokenized_dataset = dataset.map(
-        lambda example: tokenize(
-            example,
-            tokenizer
-        ),
-        remove_columns=dataset["train"].column_names,
-    )
-
-    print("\nCarregando modelo...")
-
-    model = AutoModelForCausalLM.from_pretrained(
-        MODEL_NAME
-    )
-
-    model.config.pad_token_id = tokenizer.pad_token_id
-
-    print("\nConfigurando LoRA...")
-
-    lora_config = LoraConfig(
-        r=8,
-        lora_alpha=16,
-        lora_dropout=0.05,
-        target_modules=[
-            "q_proj",
-            "k_proj",
-            "v_proj",
-            "o_proj",
-        ],
-        task_type="CAUSAL_LM",
-    )
-
-    model = get_peft_model(
-        model,
-        lora_config
-    )
-
-    model.print_trainable_parameters()
-
-    training_args = TrainingArguments(
-        output_dir="models/cuphead-qwen",
-        num_train_epochs=3,
-        per_device_train_batch_size=1,
-        per_device_eval_batch_size=1,
-        gradient_accumulation_steps=4,
-        learning_rate=2e-4,
-        logging_steps=1,
-        eval_strategy="epoch",
-        save_strategy="epoch",
-        save_total_limit=2,
-        report_to="none",
-        fp16=False,
-        bf16=False,
-    )
-
-    trainer = Trainer(
-        model=model,
+    # Passar o id como string faz o SFTTrainer carregar modelo e tokenizer (dtype do checkpoint, bf16).
+    # Sem peft_config: todos os parâmetros são treinados (fine-tuning completo).
+    trainer = SFTTrainer(
+        model=script_args.model_name_or_path,
         args=training_args,
-        train_dataset=tokenized_dataset["train"],
-        eval_dataset=tokenized_dataset["validation"],
-        data_collator=DataCollatorForLanguageModeling(
-            tokenizer=tokenizer,
-            mlm=False,
-        ),
+        train_dataset=dataset["train"],
+        eval_dataset=eval_dataset,
     )
 
-    print("\nIniciando treinamento...\n")
+    trainable = sum(p.numel() for p in trainer.model.parameters() if p.requires_grad)
+    total = sum(p.numel() for p in trainer.model.parameters())
+    print(f"Parâmetros treináveis: {trainable:,} de {total:,} ({trainable / total:.0%})")
 
-    trainer.train()
+    train_result = trainer.train()
+    trainer.log_metrics("train", train_result.metrics)
+    trainer.save_metrics("train", train_result.metrics)
 
-    print("\nSalvando modelo...")
+    if eval_dataset is not None:
+        eval_metrics = trainer.evaluate()
+        trainer.log_metrics("eval", eval_metrics)
+        trainer.save_metrics("eval", eval_metrics)
 
-    trainer.save_model(
-        "models/cuphead-qwen"
-    )
-
-    tokenizer.save_pretrained(
-        "models/cuphead-qwen"
-    )
-
-    print("\nTreinamento concluído!")
+    trainer.save_state()  # grava trainer_state.json com o histórico de loss
+    trainer.save_model(training_args.output_dir)  # com push_to_hub=true, também envia ao Hub
+    print(f"Modelo salvo em {training_args.output_dir}")
 
 
 if __name__ == "__main__":
